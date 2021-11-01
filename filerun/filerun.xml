@@ -31,7 +31,13 @@
       </Port>
     </Publish>
   </Networking>
-  <Data/>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/filerun/user-files</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Environment>
     <Variable>
       <Value>127.0.0.1</Value>
@@ -66,4 +72,5 @@
   <Config Name="Database Name" Target="FR_DB_NAME" Default="" Mode="" Description="Container Variable: FR_DB_NAME" Type="Variable" Display="always" Required="true" Mask="false">filerun</Config>
   <Config Name="Database User" Target="FR_DB_USER" Default="filerun" Mode="" Description="Container Variable: FR_DB_USER" Type="Variable" Display="always" Required="true" Mask="false">filerun</Config>
   <Config Name="Database Password" Target="FR_DB_PASS" Default="" Mode="" Description="Container Variable: FR_DB_PASS" Type="Variable" Display="always" Required="true" Mask="true">filerun</Config>
+  <Config Name="files" Target="/filerun/user-files" Default="" Mode="rw" Description="Container Path: /filerun/user-files" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
