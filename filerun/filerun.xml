@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>filerun</Name>
-  <Repository>afian/filerun</Repository>
-  <Registry>https://hub.docker.com/r/afian/filerun</Registry>
+  <Repository>filerun/filerun</Repository>
+  <Registry>https://hub.docker.com/r/filerun/filerun</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -11,9 +11,9 @@
   <Project>https://github.com/filerun/docker</Project>
   <Overview>FileRun is a self-hosted Google Drive alternative. It is a full featured web based file manager with an easy to use user interface. It is great for managing your photo, movie, audio collection, or sharing files with your family and friends.</Overview>
   <Category>Cloud: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:8889]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
-  <Icon>https://www.filerun.com/images/long-logo.png</Icon>
+  <Icon>https://www.filerun.com/images/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -35,6 +35,11 @@
     <Volume>
       <HostDir/>
       <ContainerDir>/user-files</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filerun</HostDir>
+      <ContainerDir>/var/www/html</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -66,7 +71,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8889</Config>
+  <Config Name="WebUI Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8889</Config>
   <Config Name="Database Host" Target="FR_DB_HOST" Default="db" Mode="" Description="Container Variable: FR_DB_HOST" Type="Variable" Display="always" Required="true" Mask="false">127.0.0.1</Config>
   <Config Name="Database Port" Target="FR_DB_PORT" Default="3306" Mode="" Description="Container Variable: FR_DB_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="Database Name" Target="FR_DB_NAME" Default="" Mode="" Description="Container Variable: FR_DB_NAME" Type="Variable" Display="always" Required="true" Mask="false">filerun</Config>
