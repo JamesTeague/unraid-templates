@@ -10,14 +10,14 @@
   <Support/>
   <Project>https://github.com/filerun/docker</Project>
   <Overview>FileRun is a self-hosted Google Drive alternative. It is a full featured web based file manager with an easy to use user interface. It is great for managing your photo, movie, audio collection, or sharing files with your family and friends.</Overview>
-  <Category>Cloud: Tools:</Category>
+  <Category>Cloud: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/JamesTeague/unraid-templates/master/filerun/filerun.xml</TemplateURL>
   <Icon>https://www.filerun.com/images/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1635790662</DateInstalled>
+  <DateInstalled>1641999444</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>FileRun is a self-hosted Google Drive alternative. It is a full featured web based file manager with an easy to use user interface. It is great for managing your photo, movie, audio collection, or sharing files with your family and friends.</Description>
@@ -77,5 +77,6 @@
   <Config Name="Database Name" Target="FR_DB_NAME" Default="" Mode="" Description="Container Variable: FR_DB_NAME" Type="Variable" Display="always" Required="true" Mask="false">filerun</Config>
   <Config Name="Database User" Target="FR_DB_USER" Default="filerun" Mode="" Description="Container Variable: FR_DB_USER" Type="Variable" Display="always" Required="true" Mask="false">filerun</Config>
   <Config Name="Database Password" Target="FR_DB_PASS" Default="" Mode="" Description="Container Variable: FR_DB_PASS" Type="Variable" Display="always" Required="true" Mask="true">filerun</Config>
-  <Config Name="files" Target="/user-files" Default="" Mode="rw" Description="Container Path: /user-files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="files" Target="/user-files" Default="" Mode="rw" Description="Container Path: /user-files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/files/</Config>
+  <Config Name="AppData" Target="/var/www/html" Default="/mnt/user/appdata/filerun" Mode="rw" Description="Container Path: /var/www/html" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/filerun</Config>
 </Container>
