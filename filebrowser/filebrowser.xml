@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileBrowser</Name>
+  <Repository>filebrowser/filebrowser</Repository>
+  <Registry>https://hub.docker.com/r/filebrowser/filebrowser</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/filebrowser/filebrowser</Project>
+  <Overview>File Browser - Webbased File Browser including sharing functions etc.&#xD;
+&#xD;
+https://github.com/filebrowser/filebrowser&#xD;
+&#xD;
+Just Mount other Folder to/srv&#xD;
+Example&#xD;
+/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
+/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
+&#xD;
+Read&#xD;
+https://docs.filebrowser.xyz/configuration for the config</Overview>
+  <Category>Cloud: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:80]/files/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-filebrowser.xml</TemplateURL>
+  <Icon>https://github.com/maschhoff/docker/raw/master/filebrowser/35781395.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-d /db/database.db</PostArgs>
+  <CPUset/>
+  <DateInstalled>1642446825</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>File Browser - Webbased File Browser including sharing functions etc.&#xD;
+&#xD;
+https://github.com/filebrowser/filebrowser&#xD;
+&#xD;
+Just Mount other Folder to/srv&#xD;
+Example&#xD;
+/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
+/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
+&#xD;
+Read&#xD;
+https://docs.filebrowser.xyz/configuration for the config</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/srv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filebrowser/</HostDir>
+      <ContainerDir>/db/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Files Path" Target="/srv" Default="" Mode="rw" Description="Container Path: /srv" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="AppData" Target="/db/" Default="" Mode="rw" Description="Container Path: /db/" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/filebrowser/</Config>
+</Container>
