@@ -66,6 +66,6 @@ https://filebrowser.org/configuration for the config</Description>
   <Environment/>
   <Labels/>
   <Config Name="Files Path" Target="/srv" Default="" Mode="rw" Description="Container Path: /srv" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="AppData" Target="/db/" Default="" Mode="rw" Description="Container Path: /db/" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/filebrowser/</Config>
 </Container>
