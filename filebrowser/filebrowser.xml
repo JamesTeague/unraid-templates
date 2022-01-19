@@ -22,15 +22,15 @@ Read&#xD;
 https://docs.filebrowser.xyz/configuration for the config</Overview>
   <Category>Cloud: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:80]/files/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-filebrowser.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/JamesTeague/unraid-templates/master/filebrowser/filebrowser.xml</TemplateURL>
   <Icon>https://github.com/maschhoff/docker/raw/master/filebrowser/35781395.png</Icon>
   <ExtraParams/>
   <PostArgs>-d /db/database.db</PostArgs>
   <CPUset/>
-  <DateInstalled>1642446825</DateInstalled>
+  <DateInstalled>1642626324</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>File Browser - Webbased File Browser including sharing functions etc.&#xD;
+  <Description>File Browser - Web-based File Browser including sharing functions, etc.&#xD;
 &#xD;
 https://github.com/filebrowser/filebrowser&#xD;
 &#xD;
