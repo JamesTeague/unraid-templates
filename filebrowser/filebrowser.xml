@@ -40,7 +40,7 @@ Example&#xD;
 /mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
 &#xD;
 Read&#xD;
-https://docs.filebrowser.xyz/configuration for the config</Description>
+https://filebrowser.org/configuration for the config</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish>
