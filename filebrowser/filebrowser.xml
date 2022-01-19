@@ -46,7 +46,7 @@ https://docs.filebrowser.xyz/configuration for the config</Description>
     <Publish>
       <Port>
         <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
