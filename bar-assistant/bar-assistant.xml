@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bar-assistant-server</Name>
+  <Repository>kmikus12/bar-assistant-server</Repository>
+  <Registry>https://hub.docker.com/r/kmikus12/bar-assistant-server/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/kmikus12/bar-assistant-server/</Support>
+  <Project>https://github.com/karlomikus/bar-assistant</Project>
+  <Overview>Bar assistant is a self hosted application for managing your home bar. &#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/kmikus12/bar-assistant-server/</Overview>
+  <Category>Productivity: Tools: Other:</Category>
+  <Icon>https://raw.githubusercontent.com/karlomikus/bar-assistant/master/resources/art/logo.svg</Icon>
+  <Description>Bar assistant is a self hosted application for managing your home bar. It allows you to add your ingredients, search for cocktails and create custom cocktail recipes.This repository only contains the API server, if you are looking for easy to use web client, take a look at Salt Rim.</Description>
+  <Requires>Meilisearch</Requires>
+  <Config Name="Container Path 1" Target="/var/www/cocktails/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Port 1" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="Your application instance URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MEILISEARCH_HOST" Target="MEILISEARCH_HOST" Default="" Mode="" Description="Meilisearch instance URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MEILISEARCH_KEY" Target="MEILISEARCH_KEY" Default="" Mode="" Description="Meilisearch search key" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="127.0.0.1" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">127.0.0.1</Config>
+  <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">6379</Config>
+  <Config Name="SESSION_DRIVER" Target="SESSION_DRIVER" Default="redis" Mode="" Description="" Type="Variable" Display="always-hide" Required="false" Mask="false">redis</Config>
+  <Config Name="CACHE_DRIVER" Target="CACHE_DRIVER" Default="redis" Mode="" Description="" Type="Variable" Display="always-hide" Required="false" Mask="false">redis</Config>
+</Container>
